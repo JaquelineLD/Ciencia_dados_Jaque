@@ -1,0 +1,57 @@
+# Git
+
+Conectando ao git
+
+Passo 0: Caso seja o primeiro uso, faça a configuração de usuário do Git:
+```{r eval=FALSE}
+usethis::use_git_config(
+  # pode usar seu nome, não precisa ser o usuário
+  user.name = "NOME",
+  # E-mail vinculado a sua conta
+  user.email = "seu@email.com"
+)
+```
+
+Passo 0.1: Personal access token
+
+No primeiro acesso é necessário conectar ao Github e gerar im personal access token (PAT). Sserve para autenticar o acesso no github e poder automatizar tarefas (como criar um repositório)
+
+```{r eval=FALSE}
+# Gere e copie o token!
+usethis::browse_github_token()
+
+# Abra o arquivo .Renviron:
+usethis::edit_r_environ()
+```
+
+* Adicione uma nova linha GITHUB_PAT=SEU_TOKEN
+* Pule uma linha e salve o arquivo
+* Reinicie o RStudio: CTRL + SHIFT + F10
+
+Para verificar e editar se quiser:
+ * Para acessar o PAT: `devtools::github_pat()`
+ * Para editar: `usethis::edit_r_environ()`
+
+Passo 1: adicionando o controle de versão a pasta
+```{r eval=FALSE}
+usethis::use_git()
+```
+A partir desse comando aparece uma nova aba e você adiciona o controle de versão
+
+Passo 2: Criar um repositório no Github
+```{r eval=FALSE}
+usethis::use_github()
+```
+
+```{r eval=FALSE}
+
+```
+
+```{r eval=FALSE}
+
+```
+
+
+## Example one
+
+## Example two
